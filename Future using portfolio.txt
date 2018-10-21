@@ -1,0 +1,15 @@
+<article class="project">
+                    <div class="project-details">
+                        <h3 class="project-title"> Coming soon...</h3>
+                        <!-- For uture using 
+                            <h6 class="project-course"></h6>
+                            <p class="project-date"></p>
+                            <p class="project-url"></p> -->
+                            <p class="project-description"> 
+                                <small>stay tuned</small>
+                            </p>
+                        </div>
+                        <!-- <figure class="project-imageContainer">
+                            <img src="./Images/project-image.jpg" alt="" class="project-image"> 
+                        </figure> -->
+                </article>

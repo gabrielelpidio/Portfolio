@@ -1,3 +1,45 @@
+/* imports */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?y0x01v');
+    src:  url('../fonts/icomoon.eot?y0x01v#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?y0x01v') format('truetype'),
+      url('../fonts/icomoon.woff?y0x01v') format('woff'),
+      url('../fonts/icomoon.svg?y0x01v#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-github:before {
+    content: "\e901";
+  }
+  .icon-twitter:before {
+    content: "\e902";
+  }
+  .icon-instagram:before {
+    content: "\e903";
+  }
+  .icon-menu:before {
+    content: "\e900";
+  }
+
+
 .header{
     background: #1b2127;
     color: white; 
@@ -5,15 +47,34 @@
     align-items: center;
     height: 70px;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.burger-button{
+    color: white;
+    font-size: 1em;
+    width:40px;
+    height:40px;   
+    border-radius: 50%;
+    display: none;
+    background-color: rgba(0, 0,0, .5);
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
 }
 
 .container{
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     display: inherit;
     height: inherit;
+    flex: 1;
     align-items: inherit;
     justify-content: inherit; 
+    flex-wrap: inherit;
 }
 
 figure{
@@ -51,6 +112,11 @@ ul{
     padding: 0 10px;
 }
 
+.header img {
+    vertical-align: middle;
+}
+
+
 .hero{
     color: white;
     height: 300px;
@@ -61,7 +127,8 @@ ul{
     background-position-x: right;
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .hero-image{
     object-fit: cover;
@@ -109,7 +176,7 @@ h2{
     margin-bottom: 40px;
 }
 
-/*
+
 .project strong{
     font-family: 'Fjalla One';
 }
@@ -118,26 +185,24 @@ h2{
 .project-url,
 .project-course{
     margin: 10px 0;
-} */
+}
 
-/* .project-date{
+.project-date{
     margin: 10px 0;
-} */
+}
 
 .project-description{
     font-size: 20px;
-    text-align: center;
 }
 
 .project-title{
     font-size: 30px;
     margin-top: 0;
     margin-bottom:  10px;
-    text-align: center;
 }
 
 .project-details{
-    width: 500px
+    width: 50%;
 }
 
 .project{
@@ -150,19 +215,48 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 0px 10px 0px gray;
+    flex-wrap: wrap;
 }
 
-.project-imageContainer,
-.project-image{
-    width: 500px;
+.project-imageContainer{
+    width: 50%;
 }
 
+.project-imageContainer img{
+    max-width: 100%;
+}
+
+
+.youtube-video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flexible-video{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+/* .html-video{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }   
+*/
 .experience-list-title{
     margin-left: 10px;
 }
 
 .experience-list{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .experience{
@@ -201,11 +295,15 @@ h2{
     height: 150px;
     display: flex;
     align-items: center;
-    justify-content: space-between
-}    
+    justify-content: space-between;
+    flex-wrap: wrap;
+}   
+
+
 
 .form-email h3{
-    font-family: 'Source Sans Pro'
+    font-family: 'Source Sans Pro';
+    text-align: center;
 }
 
 .form-email input{
@@ -234,27 +332,15 @@ h2{
 }
 
 .social{
-    border: 1px, solid red;
     display: flex;
     justify-content: space-between;
 }
 
 .social-link{
-    width: 50px;
-    height: 50px;
-    background-size: 50px 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
     margin: 0 10px;
-}
-
-.social-link.twitter{
-    background-image: url('../Images/twitter.svg');
-    background-size: 50px 50px;
-}
-.social-link.github{
-    background-image: url('../Images/github.svg')
-}
-.social-link.instagram{
-    background-image: url('../Images/instagram.svg')
 }
 
 .footer{
@@ -264,7 +350,8 @@ h2{
     background-color: #1b2127;
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
 }    
 .footer img{
     vertical-align: middle;
@@ -274,5 +361,228 @@ h2{
     color: white;
 }    
 
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .event-list-title {
+    margin-left: 20px;
+  }
+  .event { 
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+  }
+  .event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  .event-description {
+    text-align: left;
+  }
+  
+  .event-url {
+    color: #056fff;
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+/* Desktop first bigger media querie */
+
+@media screen and (max-width:1024px){
+
+    .container{
+        padding: 0 1em;
+    }
+
+    .hero{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1{
+        font-size: 2em;
+        z-index: 2;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width:767px){
+
+    .burger-button{
+        display: block;
+    }
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .header .logo{
+        text-align: center;
+    }
+    
+    .menu{
+        position: fixed;
+        background: rgba(2, 127, 255, .9);
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+        left: -100vw;
+        width: 100vw;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-active {
+        left: 0;
+    }
+
+    .header ol{
+        display: block;
+        flex-direction: column;
+    }
+
+    .header ol li{
+        height: 50px;
+    }
+    .header a{
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .project{
+        display: block;
+    }
+
+    .project-imageContainer{
+        width: auto;
+        text-align: center
+    }
+    
+    .project-details{
+        width: auto;
+        /* font-size: 16px; */
+    }
+
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: .3em
+    }
+    
+    .project-url{
+        font-size: 1em;
+    }
+
+    .project-course, .project-date, .project-url{
+        margin: .4em 0;
+    }
+
+    .project-course{
+        font-size: .7em;
+    }
+
+    .project-date{
+        font-size: 1em;
+    }
+
+    .project-description{
+        font-size: .8em;
+    }
+
+    .event{
+        width: auto;
+        flex-shrink: 1;
+        justify-content: center;
+    }
+    
+    /* no event-img por que el tag tiene mas relevancia que la clase */
+    .event img{
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:480px){
+    .project-details{
+        font-size: 12px;
+    }
+
+    .event-detail{
+        margin: -2em .5em .5em;
+    }
+
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        justify-content: center
+    }
+
+    .form-email h3{
+        margin-top: 0;
+    }
+
+    .form-email button{
+        font-size: 11px;
+        margin: 2em auto;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        height: auto;
+        border: 1.3em solid transparent;
+    }
+
+}
+
+@media screen and (max-width:320px){
+
+    h1{
+        font-size: 1.2em;
+    }
+
+    .hero{
+        padding: 1em;
+    }
+
+}
 
 
