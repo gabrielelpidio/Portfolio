@@ -140,7 +140,7 @@ ul{
 }
 
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', system-ui;
     margin: 0;
 }
 
@@ -150,7 +150,7 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', system-ui;
     font-weight: normal;
 }
 h1{
@@ -170,7 +170,7 @@ h1{
 h2{
     color: #027fff;
     text-transform: uppercase;
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro' system-ui;
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 40px;
@@ -178,7 +178,7 @@ h2{
 
 
 .project strong{
-    font-family: 'Fjalla One';
+    font-family: 'Fjalla One' system-ui;
 }
 
  .project-date,
@@ -303,7 +303,7 @@ h2{
 
 
 .form-email h3{
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro' system-ui;
     text-align: center;
 }
 
