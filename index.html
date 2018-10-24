@@ -9,22 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <i class="icon-menu burger-button"></i>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
-                <img src="./Images/header-logo.png" alt="imagen no disponible en este momento" height="65">
+                <img src="./Images/Personal logo.svg" alt="imagen no disponible en este momento" height="65">
             </figure>
             <nav class="menu">
                 <ol>
                     <li>
-                        <a href="#Portafolio">Portafolio</a>
+                        <a class="menu-link" href="#Portafolio">Portafolio</a>
                     </li>
                     <li>
-                        <a href="#Experiencia">Experiencia</a>
+                        <a class="menu-link" href="#Experiencia">Experiencia</a>
                     </li>
                     <li>
-                        <a href="#Contacto">Trabajemos Juntos</a>
+                        <a class="menu-link" href="#Contacto">Trabajemos Juntos</a>
                     </li>
                 </ol>
             </nav>
@@ -54,12 +54,12 @@
                                 <small>stay tuned</small>
                             </p>
                         </div>
-                        <figure class="project-imageContainer">
+                        <!-- <figure class="project-imageContainer">
                             <img src="./Images/project.png" alt="" class="project-image"> 
-                        </figure>
+                        </figure> -->
                 </article>
         </div>
-        <div class="container">
+        <!-- <div class="container">
                 <article class="project">
                     <div class="project-details">
                             <h3 class="project-title">Platzi Video</h3>
@@ -76,16 +76,16 @@
                             <img src="./Images/project.png" alt="" class="project-image" width="500"> 
                         </figure>
                 </article>
-        </div>
+        </div> -->
     </section>
-    <div class="container"> <!-- Title Experience-->
+    <!-- <div class="container"> Title Experience
         <h2 class="event-list-title">Más sobre mi experiencia</h2>
-    </div>
+    </div> -->
     <div class="container"> <!-- Experience-->
-        <section id="eventos" class="event-list">
+        <!-- <section id="eventos" class="event-list">
             <article class="event">
                 <figure class="event-imageContainer">
-                    <!-- <img class="event-image" src="./Images/platzi-conf.jpg" width="500" /> -->
+                    <img class="event-image" src="./Images/platzi-conf.jpg" width="500" />
                     <div class="flexible-video">
                         <iframe class="youtube-video"idth="560" height="315" src="https://www.youtube.com/embed/NKtTJi8Bp6I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
@@ -110,7 +110,7 @@
             
             <article class="event">
                 <figure class="event-imageContainer">
-                    <!-- <video class="html-video" src="./videos/f8.mp4" width="1280" height="720" controls></video> -->
+                    <video class="html-video" src="./videos/f8.mp4" width="1280" height="720" controls></video>
                     <img class="event-image" src="./Images/platzi-conf.jpg" width="500" />
                 </figure>
                 <div class="event-detail">
@@ -118,7 +118,7 @@
                     <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
                     <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
                 </div>
-            </article>
+            </article> -->
     </div>
         <!--
         <div>    
@@ -164,5 +164,36 @@
             </div>
         </div>
     </footer>
+    <script>
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const burgerButton = document.querySelector('#burger-menu');
+        const menu = document.querySelector('.menu');
+        
+        ipad.addListener(validation);
+
+        validation(ipad);
+
+        function validation(event){
+            if(event.matches){  
+                burgerButton.addEventListener('click', hideShow);
+            }
+
+
+            else{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+
+        console.log(linkHideShow);
+
+        function hideShow(){
+            if (menu.classList.contains('is-active')){
+                menu.classList.remove('is-active');
+            }
+            else{
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
